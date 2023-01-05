@@ -6,6 +6,8 @@
         print_r('<br>');
         print_r('Email: ' . $_POST['email']);
         print_r('<br>');
+        print_r('Password: ' . $_POST['password']);
+        print_r('<br>');
         print_r('Telefone: ' . $_POST['telefone']);
         print_r('<br>');
         print_r('Sexo: ' . $_POST['genero']);
@@ -23,6 +25,7 @@
 
         $nome = $_POST['nome'];
         $email = $_POST['email'];
+        $password = $_POST['password'];
         $telefone = $_POST['telefone'];
         $sexo = $_POST['genero'];
         $data_nasc = $_POST['data_nascimento'];
@@ -32,8 +35,8 @@
 
         // inserir os dados no BD
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email,telefone,sexo, data_nasc,cidade,estado,endereco) 
-        VALUES('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email,password,telefone,sexo, data_nasc,cidade,estado,endereco) 
+        VALUES('$nome','$email','$password','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
 
     }
     
@@ -137,6 +140,13 @@
                     <label for="email" class="labelInput">Email</label>
                 </div>
                 <br><br>
+
+                <div class="inputBox">
+                    <input type="password" name="password" id="password" class="inputUser" required>
+                    <label for="password" class="labelInput">Password</label>
+                </div>
+                <br><br>
+
                 <div class="inputBox">
                     <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                     <label for="telefone" class="labelInput">Telefone</label>
