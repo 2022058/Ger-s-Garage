@@ -40,6 +40,9 @@
 
         $result= mysqli_query($conexao, "INSERT INTO users(firstname, lastname, email, password, mobilephone, gender, birthday, address, eircode) 
         VALUES('$firstname','$lastname','$email','$password','$mobilephone','$gender','$birthday','$address','$eircode')");
+    
+        header('Location: login.php');
+
     }
     
 ?>
@@ -76,8 +79,8 @@
                 </div>
 
                 <div class="input-group w50">
-                    <label for="senha">Password</label>
-                    <input type="password" name="senha" id="senha" placeholder="Type your password" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Type your password" required>
                 </div>
 
                 
@@ -134,10 +137,7 @@
 
                 <input type="submit" name="submit" id="submit" value="SUBMIT">
                 
-                <div class="input-group">
-                    <button><a href="bookservice.html">Next</a></button>
-                </div>
-                
+                                
             </form>
         </div>
     </div>
