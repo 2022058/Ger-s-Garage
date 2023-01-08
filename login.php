@@ -13,22 +13,54 @@
     <div class="box">
         <div class="form-box">
             <h2>MEMBERS LOGIN</h2>
-            <p> Not a member yet? <a href="form.html"> Please Join Here </a> </p>                      
-            <form action="#">
+            <p> Not a member yet? <a href="createanaccount.php"> Please Join Here </a> </p>                      
+            <form action="testlogin.php" method="POST">
                 <div class="input-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Type your email" required>
+                    <input type="email" name="email" id="email" placeholder="Type your email" required>
                 </div>
 
                 <div class="input-group w50">
                     <label for="senha">Password</label>
-                    <input type="password" id="senha" placeholder="Type your password" required>
+                    <input type="password" name="password" id="senha" placeholder="Type your password" required>
                 </div>
 
-                <div class="input-group">
-                    <button>Login</button>
+                <style>
+                .inputsubmit input{
+                    width: 100%;
+                    height: 47px;
+                    background: #6420d1;
+                    border-radius: 20px;
+                    outline: none;
+                    border: none;
+                    margin-top: 15px;
+                    color: white;
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+                .button-home button{
+                    width: 100%;
+                    height: 47px;
+                    background: #6420d1;
+                    border-radius: 20px;
+                    outline: none;
+                    border: none;
+                    margin-top: 15px;
+                    color: white;
+                    cursor: pointer;
+                    font-size: 25px;    
+                }
+                </style>
+                
+                <div class="inputsubmit w50">
+                    <input type="submit" name="submit" value="Submit">
                 </div>
-
+                
+                <div class="button-home">
+                    <button><a href="home.html">Home</a></button>
+                </div>
+            
+          
             </form>
         </div>
     </div>
