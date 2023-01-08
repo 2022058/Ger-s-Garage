@@ -27,6 +27,12 @@
   padding-right: 92vh;
 } 
 
+.logo2{
+  height: 10vh;
+  display: flex;
+  justify-content:left;
+  padding-right: 2vh;
+} 
 .header .navbar a {
   font-weight: bolder;
     margin-left: 0rem;
