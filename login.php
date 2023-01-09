@@ -59,8 +59,7 @@
                 <div class="button-home">
                     <button><a href="home.html">Home</a></button>
                 </div>
-            
-          
+                      
             </form>
         </div>
     </div>
