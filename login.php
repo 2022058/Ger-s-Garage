@@ -57,7 +57,7 @@
                 </div>
                 
                 <div class="button-home">
-                    <button><a href="home.html">Home</a></button>
+                    <button><a href="index.html">Home</a></button>
                 </div>
                       
             </form>
