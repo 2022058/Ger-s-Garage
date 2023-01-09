@@ -25,7 +25,6 @@
         //Efetuar a conexão com o DB
         include_once('config.php');
 
-        
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
         $email = $_POST['email'];
