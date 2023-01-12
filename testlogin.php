@@ -35,12 +35,12 @@
        header('Location: login.php');
      
     }
-    else
+    else  
     {
        //print_r('Existe');
        $_SESSION['email'] = $email;
        $_SESSION['password'] = $password;
-       header('Location: bookservice.html'); 
+       header('Location: bookservice.php'); 
        //qua do submeter o booking, direcionar para o print da Ordem de Serviço
 
       //Como redirecionar para o gersystema.php quando for o admin?
