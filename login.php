@@ -1,3 +1,48 @@
+<?php
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$db = 'ger_garage';
+
+session_start();
+
+$data=mysqli_connect($host,$user,$password,$db);
+
+if($data===false)
+{
+    die("connection error");
+}
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    $email=$_POST["email"];
+    $password=$_POST["password"];
+
+    $sql="select * from users where email='".$email."' AND password='".$password."'";
+    
+    $result=mysqli_query($data,$sql);
+
+    $row=mysqli_fetch_array($result);
+
+    if($row["usertype"]=="user")
+    
+    {
+        $_SESSION["email"]=$email;
+        header("location: bookservice.php");
+    }
+    if($row["usertype"]=="Admin")
+    
+    {
+        $_SESSION["email"]=$email;
+        header("location: system.php");
+    }
+    else
+    {
+        echo"email or password incorrect";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +59,7 @@
         <div class="form-box">
             <h2>MEMBERS LOGIN</h2>
             <p> Not a member yet? <a href="createanaccount.php"> Please Join Here </a> </p>                      
-            <form action="testlogin.php" method="POST">
+            <form action="#" method="POST">
                 <div class="input-group">
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" placeholder="Type your email" required>
