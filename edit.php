@@ -10,15 +10,15 @@
         {
             while($user_data = mysqli_fetch_assoc($result))
             {
-                $firstname = $user_data['firstname'];
-                $lastname = $user_data['lastname'];
-                $email = $user_data['email'];
-                $password = $user_data['password'];
-                $mobilephone = $user_data['mobilephone'];
-                $gender = $user_data['gender'];
-                $birthday = $user_data['birthday'];
-                $address = $user_data['address'];
-                $eircode = $user_data['eircode'];
+                $firstname    = $user_data['firstname'];
+                $lastname     = $user_data['lastname'];
+                $email        = $user_data['email'];
+                $password     = $user_data['password'];
+                $mobilephone  = $user_data['mobilephone'];
+                $gender       = $user_data['gender'];
+                $birthday     = $user_data['birthday'];
+                $address      = $user_data['address'];
+                $eircode      = $user_data['eircode'];
             }
         }
         else
@@ -49,6 +49,7 @@
         <div class="form-box">
             <h2>Create an Account</h2>           
             <form action="saveedit.php" method="POST">
+                
                 <div class="input-group w50">
                     <label for="firstname"> First name</label>
                     <input type="text" name="firstname" id="firstname" class="inputUser" value=<?php echo $firstname;?> placeholder="Type your name" required>
