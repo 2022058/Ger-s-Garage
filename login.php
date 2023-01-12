@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $_SESSION["email"]=$email;
         header("location: bookservice.php");
     }
-    if($row["usertype"]=="Admin")
+    elseif($row["usertype"]=="Admin")
     
     {
         $_SESSION["email"]=$email;

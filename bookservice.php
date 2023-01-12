@@ -25,6 +25,7 @@
 
     }
     
+    
 ?>
 
 
@@ -143,12 +144,7 @@
                 <div>
                     <label class="quebra">Date: </label>
                     <input type="date" name="date" required>
-                    <?php 
-                        $today = date("l");
-                        if($today == "Saturday" || $today == "Sunday") {
-                            echo "<p>Sorry, we are closed on weekends. Please choose another date.</p>";
-                        }
-                    ?>
+                    
                     <br>
                     <label class="quebra">Time: </label>
                     <input type="time" name="time" min="8:00" max="18:00" required><br>
