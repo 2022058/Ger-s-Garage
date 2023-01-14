@@ -103,7 +103,7 @@
                           echo "<td>".$user_data['time']."</td>";
                           echo "<td>".$user_data['licence']."</td>";
                           echo "<td>".$user_data['brif_description_of_the_problem']."</td>";
-                          echo "<td>".$user_data['id users']."</td>";
+                          echo "<td>".$user_data['id_users']."</td>";
                           echo "<td>
                         <a class='btn btn-sm btn-primary' href='editservice.php?id=$user_data[id]' title='Editar'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
