@@ -21,7 +21,7 @@
         $result= mysqli_query($conexao, "INSERT INTO booking(car, motorcycle, service, engine, date, time, licence, brif_description_of_the_problem) 
         VALUES('$car','$motorcycle','$service','$engine','$date','$time','$licence','$brif')");
     
-        header('Location: serviceorder.php');
+        header('Location: index.html');
 
     }
     
